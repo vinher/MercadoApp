@@ -32,7 +32,7 @@ class ProductsAdapter (
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(elementos: Product) = with(itemView) {
-            itemView.findViewWithTag<TextView>("show_id").text      = elementos.id
+            itemView.findViewWithTag<TextView>("show_id").text      = elementos.id.toString()
             itemView.findViewWithTag<TextView>("show_nombre").text  = elementos.title
             itemView.findViewWithTag<TextView>("show_precio").text  = elementos.price.toString()
             itemView.findViewWithTag<TextView>("show_stock").text   = elementos.category
